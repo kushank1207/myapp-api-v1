@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapi-app
+spec:
+  selector:
+    matchLabels:
+      app: myapi-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: myapi-app
+    spec:
+      containers:
+      - name: myapi-app
+        image: kushanksingh12/myapi-app:latest
+        ports:
+        - containerPort: 80
+        env:
+        - name: DATABASE_URL
+          value: "postgresql://myuser:mypassword@postgres:5432/mydatabase"

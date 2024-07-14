@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Build artifacts
+build/
+dist/
+
+# Environment-specific files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+# Editor-specific files
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Python virtual environments and cache
+venv1/
+.venv1/
+__pycache__/
